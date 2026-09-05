@@ -1,6 +1,12 @@
-const Shop = () => {
+import PastryCard from "./PastryCard"
+
+function Shop({pastries}){
   return (
-    <h1>Shop</h1>
-  )
+    <div>
+      {pastries.map((p) => (
+        <PastryCard key={p.id} pastry={p} />
+      ))}
+    </div>
+  );
 }
 export default Shop
