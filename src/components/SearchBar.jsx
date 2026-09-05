@@ -1,6 +1,14 @@
-const SearchBar = () => {
+function SearchBar({ search, onSearch }) {
   return (
-    <h1>SearchBar</h1>
-  )
+    <div>
+      <input
+        type="text"
+        value={search}
+        onChange={(e) => onSearch(e.target.value)}
+        placeholder="Search Bakery..."
+        aria-label="Search pastries"
+      />
+    </div>
+  );
 }
-export default SearchBar
+export default SearchBar;
