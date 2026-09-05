@@ -1,7 +1,7 @@
 {
   "store_info": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Flour & Butter Bakery",
       "description": "Fresh baked goods every morning",
       "phone_number": "555-5555"
@@ -9,42 +9,42 @@
   ],
   "pastries": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Butter Croissant",
       "description": "Flaky, all-butter, laminated dough",
       "category": "Pastry",
       "price": 4.5
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Sourdough Loaf",
       "description": "Naturally leavened, 24-hour ferment",
       "category": "Bread",
       "price": 8.0
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Chocolate Chip Cookie",
       "category": "Cookie",
       "description": "Brown butter, sea salt finish",
       "price": 3.25
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Cinnamon Roll",
       "description": "Cream cheese icing, made fresh daily",
       "category": "Pastry",
       "price": 5.0
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Baguette",
       "description": "Crisp crust, open crumb",
       "category": "Bread",
       "price": 5.5
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Carrot Cake Slice",
       "description": "Cream cheese frosting, walnuts",
       "category": "Cake",
