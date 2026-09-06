@@ -10,6 +10,7 @@ function App() {
   const [pastries, setPastries] = useState([]);
   const url = "http://localhost:3000/pastries";
 
+  //For Get Request to fetch all pastries from the backend
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -17,12 +18,19 @@ function App() {
       .catch((err) => console.error("Something went wrong", err));
   }, []);
 
+  //For Delete Request to delete a pastry from the backend
+  function deletePastry(id) {
+    fetch(`url/${id}`)
+      .then(() => setPastries(pastries.filter((p) => p.id !== id)))
+      .catch();
+  }
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop pastries={pastries} />} />
-        <Route path="shop/:id" element={<PastryDetail />} />
+        <Route path="shop/:id" element={<PastryDetail pastries={pastries} />} />
         <Route path="admin" element={<AdminPortal />} />
       </Route>
     </Routes>
