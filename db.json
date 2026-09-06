@@ -1,54 +1,79 @@
 {
-  "store_info": [
-    {
-      "id": "1",
-      "name": "Flour & Butter Bakery",
-      "description": "Fresh baked goods every morning",
-      "phone_number": "555-5555"
-    }
-  ],
   "pastries": [
     {
       "id": "1",
       "name": "Butter Croissant",
       "description": "Flaky, all-butter, laminated dough",
       "category": "Pastry",
-      "price": 4.5
+      "price": 4.5,
+      "allergens": "Contains gluten, dairy",
+      "ingredients": ["Flour", "Butter", "Yeast", "Salt", "Milk"]
     },
     {
       "id": "2",
       "name": "Sourdough Loaf",
       "description": "Naturally leavened, 24-hour ferment",
       "category": "Bread",
-      "price": 8.0
+      "price": 8.0,
+      "allergens": "Contains gluten",
+      "ingredients": ["Flour", "Water", "Salt", "Sourdough starter"]
     },
     {
       "id": "3",
       "name": "Chocolate Chip Cookie",
-      "category": "Cookie",
       "description": "Brown butter, sea salt finish",
-      "price": 3.25
+      "category": "Cookie",
+      "price": 3.25,
+      "allergens": "Contains gluten, dairy, eggs",
+      "ingredients": [
+        "Flour",
+        "Butter",
+        "Brown sugar",
+        "Eggs",
+        "Chocolate chips",
+        "Sea salt"
+      ]
     },
     {
       "id": "4",
       "name": "Cinnamon Roll",
       "description": "Cream cheese icing, made fresh daily",
       "category": "Pastry",
-      "price": 5.0
+      "price": 5.0,
+      "allergens": "Contains gluten, dairy, eggs",
+      "ingredients": [
+        "Flour",
+        "Butter",
+        "Cinnamon",
+        "Cream cheese",
+        "Sugar",
+        "Eggs"
+      ]
     },
     {
       "id": "5",
       "name": "Baguette",
       "description": "Crisp crust, open crumb",
       "category": "Bread",
-      "price": 5.5
+      "price": 5.5,
+      "allergens": "Contains gluten",
+      "ingredients": ["Flour", "Water", "Salt", "Yeast"]
     },
     {
       "id": "6",
       "name": "Carrot Cake Slice",
       "description": "Cream cheese frosting, walnuts",
       "category": "Cake",
-      "price": 6.0
+      "price": 6.0,
+      "allergens": "Contains gluten, dairy, eggs, nuts",
+      "ingredients": [
+        "Flour",
+        "Carrots",
+        "Walnuts",
+        "Cream cheese",
+        "Eggs",
+        "Sugar"
+      ]
     }
   ]
 }
