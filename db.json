@@ -63,6 +63,5 @@
       "allergens": "Contains gluten, dairy",
       "id": "uoBoVl4QW_U"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
