@@ -20,9 +20,33 @@ function App() {
 
   //For Delete Request to delete a pastry from the backend
   function deletePastry(id) {
-    fetch(`url/${id}`)
+    fetch(`${url}/${id}`, { method: "DELETE" })
       .then(() => setPastries(pastries.filter((p) => p.id !== id)))
-      .catch();
+      .catch((err) => console.error("Something went wrong", err));
+  }
+  //For Create Request to create a pastry to the backend
+  function addPastry(newPastry) {
+    fetch(`${url}`, {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(newPastry),
+    })
+      .then((res) => res.json())
+      .then((data) => setPastries([...pastries, data]))
+      .catch((err) => console.error("Error:", err));
+  }
+  //For Update Request to update a pastry from the backend
+  function updatePastry(updatedPastry) {
+    fetch(`${url}/${updatedPastry.id}`, {
+      method: "PUT",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(updatedPastry),
+    })
+      .then((res) => res.json())
+      .then((data) =>
+        setPastries(pastries.map((p) => (p.id === data.id ? data : p))),
+      )
+      .catch((err) => console.error("Error:", err));
   }
 
   return (
@@ -31,7 +55,17 @@ function App() {
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop pastries={pastries} />} />
         <Route path="shop/:id" element={<PastryDetail pastries={pastries} />} />
-        <Route path="admin" element={<AdminPortal />} />
+        <Route
+          path="admin"
+          element={
+            <AdminPortal
+              onDelete={deletePastry}
+              updatePastry={updatePastry}
+              addPastry={addPastry}
+              pastries={pastries}
+            />
+          }
+        />
       </Route>
     </Routes>
   );

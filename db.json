@@ -1,22 +1,22 @@
 {
   "pastries": [
     {
-      "id": "1",
       "name": "Butter Croissant",
       "description": "Flaky, all-butter, laminated dough",
       "category": "Pastry",
-      "price": 4.5,
+      "price": 4.4,
+      "ingredients": "Flour, Butter, Yeast, Salt, Milk",
       "allergens": "Contains gluten, dairy",
-      "ingredients": ["Flour", "Butter", "Yeast", "Salt", "Milk"]
+      "id": "1"
     },
     {
       "id": "2",
       "name": "Sourdough Loaf",
       "description": "Naturally leavened, 24-hour ferment",
       "category": "Bread",
-      "price": 8.0,
+      "price": 8,
       "allergens": "Contains gluten",
-      "ingredients": ["Flour", "Water", "Salt", "Sourdough starter"]
+      "ingredients": "Flour, Water, Salt, Sourdough starter"
     },
     {
       "id": "3",
@@ -25,30 +25,16 @@
       "category": "Cookie",
       "price": 3.25,
       "allergens": "Contains gluten, dairy, eggs",
-      "ingredients": [
-        "Flour",
-        "Butter",
-        "Brown sugar",
-        "Eggs",
-        "Chocolate chips",
-        "Sea salt"
-      ]
+      "ingredients": "Flour, Butter, Brown sugar, Eggs, Chocolate chips, Sea salt"
     },
     {
       "id": "4",
       "name": "Cinnamon Roll",
       "description": "Cream cheese icing, made fresh daily",
       "category": "Pastry",
-      "price": 5.0,
+      "price": 5,
       "allergens": "Contains gluten, dairy, eggs",
-      "ingredients": [
-        "Flour",
-        "Butter",
-        "Cinnamon",
-        "Cream cheese",
-        "Sugar",
-        "Eggs"
-      ]
+      "ingredients": "Flour, Butter, Cinnamon, Cream cheese, Sugar, Eggs"
     },
     {
       "id": "5",
@@ -57,23 +43,26 @@
       "category": "Bread",
       "price": 5.5,
       "allergens": "Contains gluten",
-      "ingredients": ["Flour", "Water", "Salt", "Yeast"]
+      "ingredients": "Flour, Water, Salt, Yeast"
     },
     {
       "id": "6",
       "name": "Carrot Cake Slice",
       "description": "Cream cheese frosting, walnuts",
       "category": "Cake",
-      "price": 6.0,
+      "price": 6,
       "allergens": "Contains gluten, dairy, eggs, nuts",
-      "ingredients": [
-        "Flour",
-        "Carrots",
-        "Walnuts",
-        "Cream cheese",
-        "Eggs",
-        "Sugar"
-      ]
+      "ingredients": "Flour, Carrots, Walnuts, Cream cheese, Eggs, Sugar"
+    },
+    {
+      "name": "fggg",
+      "description": "Flaky, all-butter, laminated dough",
+      "category": "Pastry",
+      "price": 0.29,
+      "ingredients": "Flour,Butter,Yeast,Salt,Milk",
+      "allergens": "Contains gluten, dairy",
+      "id": "uoBoVl4QW_U"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
