@@ -17,7 +17,7 @@ function PastryDetail({ pastries }) {
       <h1>{pastry.name}</h1>
       <p>{pastry.description}</p>
       <p>Price: ${pastry.price.toFixed(2)}</p>
-      <p>{pastry.allergens}</p>
+      {<p>⚠️ {pastry.allergens}</p>}
       {
         <div>
           <h3>Ingredients</h3>
