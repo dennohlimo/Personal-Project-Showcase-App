@@ -8,15 +8,17 @@ const links = [
 
 const NavBar = () => {
   return (
-    <div>
-      <header>
-        {links.map((link) => (
-          <Link key={link.to} to={link.to}>
-            {link.label}
-          </Link>
-        ))}
-      </header>
-    </div>
+    <header className="flex items-center justify-between bg-amber-800 px-6 py-4 text-amber-50">
+      {links.map((link) => (
+        <Link
+          key={link.to}
+          to={link.to}
+          className="text-sm font-medium hover:text-amber-200"
+        >
+          {link.label}
+        </Link>
+      ))}
+    </header>
   );
 };
 export default NavBar;

@@ -7,10 +7,10 @@
       "price": 4.4,
       "ingredients": "Flour, Butter, Yeast, Salt, Milk",
       "allergens": "Contains gluten, dairy",
-      "id": "1"
+      "id": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Sourdough Loaf",
       "description": "Naturally leavened, 24-hour ferment",
       "category": "Bread",
@@ -19,7 +19,7 @@
       "ingredients": "Flour, Water, Salt, Sourdough starter"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Chocolate Chip Cookie",
       "description": "Brown butter, sea salt finish",
       "category": "Cookie",
@@ -28,7 +28,7 @@
       "ingredients": "Flour, Butter, Brown sugar, Eggs, Chocolate chips, Sea salt"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Cinnamon Roll",
       "description": "Cream cheese icing, made fresh daily",
       "category": "Pastry",
@@ -37,7 +37,7 @@
       "ingredients": "Flour, Butter, Cinnamon, Cream cheese, Sugar, Eggs"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Baguette",
       "description": "Crisp crust, open crumb",
       "category": "Bread",
@@ -46,22 +46,13 @@
       "ingredients": "Flour, Water, Salt, Yeast"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Carrot Cake Slice",
       "description": "Cream cheese frosting, walnuts",
       "category": "Cake",
       "price": 6,
       "allergens": "Contains gluten, dairy, eggs, nuts",
       "ingredients": "Flour, Carrots, Walnuts, Cream cheese, Eggs, Sugar"
-    },
-    {
-      "name": "fggg",
-      "description": "Flaky, all-butter, laminated dough",
-      "category": "Pastry",
-      "price": 0.29,
-      "ingredients": "Flour,Butter,Yeast,Salt,Milk",
-      "allergens": "Contains gluten, dairy",
-      "id": "uoBoVl4QW_U"
     }
   ]
 }
