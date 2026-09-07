@@ -38,6 +38,9 @@ function AdminPortal({ onDelete, pastries, addPastry, updatePastry }) {
 
     const item = { ...form, price: Number(form.price) };
 
+    // editingId being set is what tells this form "you're editing, not
+    // creating" The form will either call the updatePastry function or the addPastry function based on whether editingId is set or not.
+
     if (editingId) {
       updatePastry({ ...item, id: editingId });
     } else {
@@ -66,89 +69,125 @@ function AdminPortal({ onDelete, pastries, addPastry, updatePastry }) {
     setEditingId(null);
   }
 
+  
+
   return (
-    <div>
-      <div>
-        <h1>Admin Portal</h1>
-        <button onClick={cancelEdit}>Add Item</button>
-        <div>
-          <h3>{editingId ? "Edit Item" : "Add New Item"}</h3>
-          <form onSubmit={handleSubmit}>
-            <input
-              name="name"
-              placeholder="Item Name"
-              value={form.name}
-              onChange={handleChange}
-            />
-            <input
-              name="category"
-              placeholder="Category"
-              value={form.category}
-              onChange={handleChange}
-            />
-            <input
-              name="price"
-              type="number"
-              step="0.01"
-              placeholder="Price"
-              value={form.price}
-              onChange={handleChange}
-            />
-            <input
-              name="ingredients"
-              placeholder="Ingredients (e.g. Flour, Butter, Sugar)"
-              value={form.ingredients}
-              onChange={handleChange}
-            />
-            <input
-              name="allergens"
-              placeholder="Allergens (e.g. Wheat, Milk, Eggs)"
-              value={form.allergens}
-              onChange={handleChange}
-            />
-            <input
-              name="description"
-              placeholder="Description"
-              value={form.description}
-              onChange={handleChange}
-            />
-            <button>{editingId ? "Update" : "Submit"}</button>
+    <div className="p-4">
+      <div className="mb-4 flex items-center justify-between">
+        <h1 className="text-xl font-bold">Admin Portal</h1>
+        <button
+          onClick={cancelEdit}
+          className="rounded bg-amber-600 px-4 py-2 font-semibold text-white hover:bg-amber-700"
+        >
+          Add Item
+        </button>
+      </div>
+
+      <div className="mb-6 rounded bg-white p-4 shadow">
+        <h3 className="mb-3 text-lg font-bold">
+          {editingId ? "Edit Item" : "Add New Item"}
+        </h3>
+        <form onSubmit={handleSubmit} className="grid gap-3 md:grid-cols-2">
+          <input
+            name="name"
+            placeholder="Item Name"
+            value={form.name}
+            onChange={handleChange}
+            className="w-full rounded border p-2"
+          />
+          <input
+            name="category"
+            placeholder="Category"
+            value={form.category}
+            onChange={handleChange}
+            className="w-full rounded border p-2"
+          />
+          <input
+            name="price"
+            type="number"
+            step="0.01"
+            placeholder="Price"
+            value={form.price}
+            onChange={handleChange}
+            className="w-full rounded border p-2"
+          />
+          <input
+            name="ingredients"
+            placeholder="Ingredients (e.g. Flour, Butter, Sugar)"
+            value={form.ingredients}
+            onChange={handleChange}
+            className="w-full rounded border p-2"
+          />
+          <input
+            name="allergens"
+            placeholder="Allergens (e.g. Wheat, Milk, Eggs)"
+            value={form.allergens}
+            onChange={handleChange}
+            className="w-full rounded border p-2"
+          />
+          <input
+            name="description"
+            placeholder="Description"
+            value={form.description}
+            onChange={handleChange}
+            className="w-full rounded border p-2"
+          />
+          <div className="flex gap-2 md:col-span-2">
+            <button className="rounded bg-amber-600 px-6 py-2 font-semibold text-white hover:bg-amber-700">
+              {editingId ? "Update" : "Submit"}
+            </button>
             {editingId && (
-              <button type="button" onClick={cancelEdit}>
+              <button
+                type="button"
+                onClick={cancelEdit}
+                className="rounded bg-gray-200 px-6 py-2 font-semibold text-gray-800 hover:bg-gray-300"
+              >
                 Cancel
               </button>
             )}
-          </form>
-        </div>
+          </div>
+        </form>
+      </div>
 
-        {/* Displays the Inventory */}
-        <div>
-          {pastries.map((pastry) => (
-            <div key={pastry.id}>
+      {/* Displays the Inventory */}
+      <div className="grid gap-3 md:grid-cols-2">
+        {pastries.map((pastry) => (
+          <div key={pastry.id} className="rounded bg-white p-3 shadow">
+            <div className="flex items-center justify-between">
               <div>
-                <div>
-                  <div>🥐 {pastry.name}</div>
-                  <div>{pastry.category}</div>
-                  <div>${Number(pastry.price).toFixed(2)}</div>
-                </div>
-
-                <div className="flex gap-2">
-                  <button onClick={() => editItem(pastry)}>Edit</button>
-                  <button onClick={() => onDelete(pastry.id)}>Delete</button>
+                <div className="font-bold">🥐 {pastry.name}</div>
+                <div className="text-sm text-gray-500">{pastry.category}</div>
+                <div className="font-bold text-amber-700">
+                  ${Number(pastry.price).toFixed(2)}
                 </div>
               </div>
 
-              <div className="mt-3 text-sm">
-                <p>
-                  <strong>Ingredients:</strong> {pastry.ingredients}
-                </p>
-                <p>
-                  <strong>Allergens:</strong> {pastry.allergens}
-                </p>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => editItem(pastry)}
+                  className="rounded bg-gray-200 px-3 py-1.5 hover:bg-gray-300"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => onDelete(pastry.id)}
+                  className="rounded bg-rose-100 px-3 py-1.5 text-rose-600 hover:bg-rose-200"
+                >
+                  Delete
+                </button>
               </div>
             </div>
-          ))}
-        </div>
+
+            <div className="mt-3 text-sm">
+              <p>
+                <strong>Ingredients:</strong> {pastry.ingredients}
+              </p>
+              <p>
+                <strong>Allergens:</strong> {pastry.allergens}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
